@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev ./src/server.ts",
+    "dev": "ts-node-dev --transpileOnly --ignore-watch node-modules ./src/server.ts",
+    "knex:migrate": "npx knex migrate:latest",
+    "knex:seed": "npx knex seed:run",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
